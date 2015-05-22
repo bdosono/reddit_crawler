@@ -5,7 +5,7 @@ from scrapy.http import Request
 from scrapy.selector import Selector
 from scrapy.exceptions import CloseSpider
 
-from reddit_crawler.items import ThreadItem, CommentItem
+from reddit-crawler.items import ThreadItem, CommentItem
 
 class RedditSpider(scrapy.Spider):
 	name = "reddit"

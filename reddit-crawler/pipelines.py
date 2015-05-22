@@ -9,7 +9,7 @@ import scrapy
 import json
 
 from scrapy.contrib.exporter import JsonLinesItemExporter
-from reddit_crawler.items import CommentItem, ThreadItem
+from reddit-crawler.items import CommentItem, ThreadItem
 
 class JsonExportPipeline(object):
 
