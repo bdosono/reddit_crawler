@@ -1,0 +1,9 @@
+SCRIPT_AREA_BORDER=\#FFFFFF | null | false | false | false | false
+commentBorder=\#666666 | null | false | false | false | false
+commentText=\#666666 | null | false | false | false | false
+eclipse.preferences.version=1
+jsp_content=\#FFFFFF | null | false | false | false | false
+tagAttributeEquals=\#FFFFFF | null | false | false | false | false
+tagAttributeName=\#999999 | null | false | false | false | false
+tagAttributeValue=\#00A40F | null | false | false | false | false
+tagBorder=\#F7C527 | null | false | false | false | false
