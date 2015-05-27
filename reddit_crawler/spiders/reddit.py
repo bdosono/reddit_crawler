@@ -20,8 +20,8 @@ class RedditSpider(scrapy.Spider):
 	def parse(self, response):
 		self.log("MAIN PAGE LINK: %s" % response.url)
 		sel = Selector(response)
-		threads = sel.xpath("//div[@role='main']/div[2]/div[@id='siteTable']/div[@onclick]")
-		next_page = sel.xpath("//div[@role='main']/div[2]/div[@id='siteTable']/div[@class='nav-buttons']/span/a[@rel='nofollow next']/@href").extract()
+		threads = sel.xpath("//div[@id='siteTable']/div[@onclick]")
+		next_page = sel.xpath("//div[@id='siteTable']/div[@class='nav-buttons']/span/a[@rel='nofollow next']/@href").extract()
 		
 		for thread in threads:
 			item = ThreadItem()
@@ -38,7 +38,7 @@ class RedditSpider(scrapy.Spider):
 			
 			yield request
 			
-		if self.page_count < self.pages:
+		if (self.pages > 1) and (self.page_count < self.pages):
 			self.page_count += 1
 			request = Request(next_page[0], callback=self.parse)
 			yield request
