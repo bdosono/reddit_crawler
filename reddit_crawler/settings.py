@@ -8,8 +8,8 @@ NEWSPIDER_MODULE = 'reddit_crawler.spiders'
 DEPTH_LIMIT = 0
 DOWNLOAD_DELAY = 1
 
-ITEM_PIPELINES = {'reddit_crawler.pipelines.JsonExportPipeline': 300, }
-
+ITEM_PIPELINES = {'reddit_crawler.pipelines.JsonExportPipeline': 300,
+		  'reddit_crawler.pipelines.PostgresExportPipeline': 0, }
 
 FEED_URI = 'file:///tmp/export.json'
 
