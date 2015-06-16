@@ -15,4 +15,4 @@ The number of pages to crawl. Pages here refers to following 'next page' links o
 ##### JsonExportPipeline
 Default pipeline. Outputs scraped data into tmp/export.json using JsonLinesItemExporter().
 ##### PostgresExportPipeline
-To use, the database, user, and password values must be written in __init__()'s psycopg2.connect parameters. Additionally, the pipeline is set up for use with a database containing two tables: threads and comments. Threads contains the columns: threadID, title, link, datetime, score, username, threadurl, body. Comments contains the columns: threadID, commentID, body, username, parent, datetime, score.
+To use, the database, user, and password values must be written in \_\_init\_\_()'s psycopg2.connect parameters. Additionally, the pipeline is set up for use with a database containing two tables: threads and comments. Threads contains the columns: threadID, title, link, datetime, score, username, threadurl, body. Comments contains the columns: threadID, commentID, body, username, parent, datetime, score.
