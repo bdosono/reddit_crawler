@@ -52,10 +52,10 @@ class RedditSpider(scrapy.Spider):
 		for comment in comments:
 			item = CommentItem()
 			
-			if (comment.xpath("../@class").extract()[0] == "sitetable listing"):	# check for a parent comment
+			if (comment.xpath("../@class").extract()[0] == "sitetable listing"):		# check for a parent comment
 				item['parent'] = comment.xpath("../@id").re('[a-zA-Z0-9]*$')[0]		# if parent comment exists, get the parent's commentID from the @id tag
 			else:
-				item['parent'] = []													# else set value to an empty list
+				item['parent'] = []							# else set value to an empty list
 			
 			item['commentID'] = comment.xpath("p[@class='parent']/a/@name").extract()
 			item['user'] = comment.xpath("div[@class='entry unvoted']/p/a[2]/@href").extract()

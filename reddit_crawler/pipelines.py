@@ -6,7 +6,6 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 import scrapy
-import json
 import psycopg2
 import psycopg2.extensions
 import re
