@@ -11,7 +11,7 @@ DOWNLOAD_DELAY = 1
 ITEM_PIPELINES = {'reddit_crawler.pipelines.JsonExportPipeline': 300,
 		  'reddit_crawler.pipelines.PostgresExportPipeline': 0, }
 
-FEED_URI = 'file:///data/export.json'
+FEED_URI = 'file:///tmp/export.json'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'reddit_crawler (+http://www.yourdomain.com)'
