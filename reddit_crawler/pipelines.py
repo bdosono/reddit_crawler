@@ -21,7 +21,7 @@ from reddit_crawler.items import CommentItem, ThreadItem
 class JsonExportPipeline(object):
 
 	def __init__(self):
-		self.file = open('tmp/export.json', 'w+b')
+		self.file = open('data/export.json', 'w+b')
 
 	def open_spider(self, spider):
 		self.exporter = JsonLinesItemExporter(self.file)
